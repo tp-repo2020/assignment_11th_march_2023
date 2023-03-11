@@ -1,0 +1,57 @@
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h3 class="text-center">Update/Edit Job</h3>
+                <form (ngSubmit)="updateJobForm()" [formGroup]="createJob">
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Job ID</label>
+                        <input type="text" class="form-control" formControlName="id" placeholder="Job ID" readonly>
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Job Number</label>
+                        <input type="text" class="form-control" formControlName="job_number" placeholder="Job Number">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Job Title</label>
+                        <input type="text" class="form-control" formControlName="job_title" placeholder="Job Title">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Job Start Date</label>
+                        <input type="date" class="form-control" formControlName="job_start_date" placeholder="Job Start Date">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Job End Date</label>
+                        <input type="date" class="form-control" formControlName="job_close_date" placeholder="Job End Date">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Job Notes</label>
+                        <input type="text" class="form-control" formControlName="job_notes" placeholder="Job Notes">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Exp Required</label>
+                        <input type="checkbox" class="m-3"  formControlName="experience_required" placeholder="Exp Required">
+                    </div>
+
+                    <div class="mb-1">
+                        <label for="exampleFormControlInput1" class="form-label">Number of Openings</label>
+                        <input type="number" class="form-control" formControlName="number_of_openings" placeholder="Number of Openings">
+                    </div>
+
+                    <div class="mb-1 text-center">
+                        <button type="submit" class="btn btn-success m-2" [disabled]="createJob.invalid">Update Job</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</div>

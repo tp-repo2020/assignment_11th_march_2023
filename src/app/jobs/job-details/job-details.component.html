@@ -1,0 +1,20 @@
+<div class="row text-center mt-3">
+    <div class="col-12">
+        <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">Job Details</h5>
+              <div class="card-text">
+                <p>Job ID : {{jobDetails.id}}</p>
+                <p>Job Number : {{jobDetails.job_number}}</p>
+                <p>Job Title : {{jobDetails.job_title}}</p>
+                <p>Job Start Date : {{jobDetails.job_start_date}}</p>
+                <p>Job Close Date : {{jobDetails.job_close_date}}</p>
+                <p>Exp Required : {{jobDetails.experience_required ? 'Yes' : 'No'}}</p>
+                <p>Number Of Openings : {{jobDetails.number_of_openings}}</p>
+                <p>Job Notes : {{jobDetails.job_notes}}</p>
+              </div>
+              <a class="btn btn-primary" role="button" routerLink="/jobs" class="card-link">Go to All Jobs</a>
+            </div>
+          </div>
+    </div>
+</div>

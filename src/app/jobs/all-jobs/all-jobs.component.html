@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-12 text-center">
+        <button class="btn btn-primary m-3" title="By click here you will be redirected to Create Job Page" routerLink="/jobs/new">Create New Job</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Job ID</th>
+                    <th>Job Number</th>
+                    <th>Job Title</th>
+                    <th>Job Start Date</th>
+                    <th>Job Close Date</th>
+                    <th>Exp Required</th>
+                    <th>No of Openings</th>
+                    <th>Job Notes</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let job of jobs" style="cursor: pointer;">
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.id}}</td>
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.job_number}}</td>
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.job_title}}</td>
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.job_start_date}}</td>
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.job_close_date}}</td>
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.experience_required}}</td>
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.number_of_openings}}</td>
+                    <td [routerLink]="'/job-detail/'+job.id">{{job.job_notes}}</td>
+                    <td>
+                        <button class="btn" [routerLink]="'/job/'+job.id">Edit</button>
+                        <button class="btn" (click)="deleteJob(job.id)">Delte</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
